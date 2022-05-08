@@ -35,11 +35,11 @@ For manual installation of other tools:
 
 Run CMD as administator
 
-!(images/run_cmd_as_admin.png)[]
+![images/run_cmd_as_admin.png]()
 
 and then run:
 
-!()[images/install_wsl.png]
+![images/install_wsl.png]()
 
 ```
 wsl.exe --install
