@@ -35,23 +35,25 @@ For manual installation of other tools:
 
 Run CMD as administator
 
+Right click the icon, then right click again on 'Command Prompt' in the menu:
+
 ![](images/run_cmd_as_admin.png)
 
 and then run:
-
-![](images/install_wsl.png)
 
 ```
 wsl.exe --install
 ```
 
-Now update:
+![](images/install_wsl.png)
 
-![](images/update_wsl.png)
+Now update:
 
 ```
 sudo apt update && sudo apt upgrade
 ```
+
+![](images/update_wsl.png)
 
 
 #### Windows Terminal:
@@ -71,14 +73,29 @@ https://sourceforge.net/projects/vcxsrv/
 
 Install from here https://sourceforge.net/projects/vcxsrv/files/latest/download
 
-![](images/xsrv_no_client.png)
-![](images/xsrv_using.png)
-![](images/xsrv_accept_defaults.png)
-![](images/xsrv_save_config.png)
-![](images/xsrv_working.png)
+After it is installed there should be an icon for running it:
+
 ![](images/run_xlaunch.png)
+
+Double-click on the icon, then choose 'Multiple Windows':
+
 ![](images/xsrv_multiple_windows.png)
+
+And then choose 'No Client':
+
+![](images/xsrv_no_client.png)
+
+Accept the defaults:
+
+![](images/xsrv_accept_defaults.png)
+
+Now test it works by running the included X apps:
+
 ![](images/xsrv_test.png)
+
+Wait a short time, and verify that the apps can run and appear similar to this:
+
+![](images/xsrv_working.png)
 
 
 ### Usage:
@@ -88,4 +105,9 @@ To use, from inside of WSL, set the DISPLAY environment variable to 0:0, and the
 ```
 DISPLAY=0:0 ./splitview2
 ```
+
+If it works, the Linux application running inside of WSL will be able to display from the X server running in Windows:
+
+![](images/xsrv_using.png)
+
 
