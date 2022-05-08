@@ -35,11 +35,11 @@ For manual installation of other tools:
 
 Run CMD as administator
 
-![images/run_cmd_as_admin.png]()
+![](images/run_cmd_as_admin.png)
 
 and then run:
 
-![images/install_wsl.png]()
+![](images/install_wsl.png)
 
 ```
 wsl.exe --install
@@ -47,7 +47,7 @@ wsl.exe --install
 
 Now update:
 
-images/update_wsl.png     
+![](images/update_wsl.png)
 
 ```
 sudo apt update && sudo apt upgrade
@@ -71,14 +71,14 @@ https://sourceforge.net/projects/vcxsrv/
 
 Install from here https://sourceforge.net/projects/vcxsrv/files/latest/download
 
-images/xsrv_no_client.png 
-images/xsrv_using.png
-images/xsrv_accept_defaults.png 
-images/xsrv_save_config.png 
-images/xsrv_working.png
-images/run_xlaunch.png
-images/xsrv_multiple_windows.png
-images/xsrv_test.png
+![](images/xsrv_no_client.png)
+![](images/xsrv_using.png)
+![](images/xsrv_accept_defaults.png)
+![](images/xsrv_save_config.png)
+![](images/xsrv_working.png)
+![](images/run_xlaunch.png)
+![](images/xsrv_multiple_windows.png)
+![](images/xsrv_test.png)
 
 
 ### Usage:
