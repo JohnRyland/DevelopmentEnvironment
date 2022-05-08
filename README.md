@@ -41,7 +41,6 @@ and then run:
 
 !()[images/install_wsl.png]
 
-
 ```
 wsl.exe --install
 ```
