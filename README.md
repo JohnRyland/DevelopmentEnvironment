@@ -31,7 +31,7 @@ For manual installation of other tools:
 ### Installation of these Tools:
 
 
-WSL2:
+#### WSL2:
 
 Run CMD as administator, and then run:
 
@@ -40,18 +40,18 @@ wsl.exe --install
 ```
 
 
-Windows Terminal:
+#### Windows Terminal:
 
 Install from windows store from here:  https://aka.ms/terminal
 
 
-Git Bash:
+#### Git Bash:
 
 Install latest package from here: https://github.com/git-for-windows/git/releases/latest
 eg: https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/Git-2.36.0-64-bit.exe
 
 
-VcXsrv:
+#### VcXsrv:
 
 https://sourceforge.net/projects/vcxsrv/
 
