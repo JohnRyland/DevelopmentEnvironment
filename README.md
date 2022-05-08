@@ -31,31 +31,55 @@ For manual installation of other tools:
 ### Installation of these Tools:
 
 
-WSL2:
+#### WSL2:
 
-Run CMD as administator, and then run:
+Run CMD as administator
+
+!(images/run_cmd_as_admin.png)[]
+
+and then run:
+
+!()[images/install_wsl.png]
+
 
 ```
 wsl.exe --install
 ```
 
+Now update:
 
-Windows Terminal:
+images/update_wsl.png     
+
+```
+sudo apt update && sudo apt upgrade
+```
+
+
+#### Windows Terminal:
 
 Install from windows store from here:  https://aka.ms/terminal
 
 
-Git Bash:
+#### Git Bash:
 
 Install latest package from here: https://github.com/git-for-windows/git/releases/latest
 eg: https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/Git-2.36.0-64-bit.exe
 
 
-VcXsrv:
+#### VcXsrv:
 
 https://sourceforge.net/projects/vcxsrv/
 
 Install from here https://sourceforge.net/projects/vcxsrv/files/latest/download
+
+images/xsrv_no_client.png 
+images/xsrv_using.png
+images/xsrv_accept_defaults.png 
+images/xsrv_save_config.png 
+images/xsrv_working.png
+images/run_xlaunch.png
+images/xsrv_multiple_windows.png
+images/xsrv_test.png
 
 
 ### Usage:
