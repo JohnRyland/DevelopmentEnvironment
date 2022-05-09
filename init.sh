@@ -128,8 +128,11 @@ then
   # Install more tools
   scoop install ffmpeg jq neovim rust wget 
 
-  # Various desktop applications
-  # scoop install windows-terminal github vscode libreoffice inkscape gimp vcxsrv vlc sourcetree notepadplusplus obs-studio putty cdburnerxp clion crystaldiskinfo crystaldiskmark debugviewpp depends geekbench godot spacesniffer googlechrome handbrake hwinfo inno-setup irfanview kodi magicavoxel makemkv meld mqtt-spy msiafterburner skype
+  # Various development desktop applications
+  scoop install windows-terminal vcxsrv
+
+  # Various common desktop applications
+  # scoop install github vscode libreoffice inkscape gimp vlc sourcetree notepadplusplus obs-studio putty cdburnerxp clion crystaldiskinfo crystaldiskmark debugviewpp depends geekbench godot spacesniffer googlechrome handbrake hwinfo inno-setup irfanview kodi magicavoxel makemkv meld mqtt-spy msiafterburner skype
  
   # Mostly already available through git-bash, seems installing the git package will install git-for-windows
   # scoop install busybox curl grep gzip tar unzip which diffutils

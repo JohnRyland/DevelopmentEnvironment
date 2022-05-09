@@ -7,8 +7,7 @@ Set up for a development environment on different platforms
 There is an init.sh script here that can detect the platform and install the
 various packages. On Linux and macOS, the script can run natively. On Windows
 the script however requires a shell to be installed first. The recommended
-shell for this is git-bash. It is also assumed that for each platform, git
-has been installed.
+shell for this is git-bash.
 
 Once a shell/terminal program has been installed, then run this:
 
@@ -16,7 +15,15 @@ Once a shell/terminal program has been installed, then run this:
 ./init.sh
 ```
 
-For manual installation of other tools:
+On Windows, Linux and macOS this will install make, cmake, python, compilers, git, doxygen,
+pandoc, ctags, cppcheck, sqlite and a number of other tools and utilities.
+
+On Windows this will additionally install a number of desktop applications, including
+Windows Terminal, Git Bash and VcXsrv. These are installed to %USERPROFILE%/scoop/apps and
+can be launched from the start menu.
+
+These manual installation instructions are now deprecated other than for the installation
+of WSL2.
 
 
 ## Windows 10
@@ -58,10 +65,18 @@ sudo apt update && sudo apt upgrade
 
 #### Windows Terminal:
 
+A terminal emulator which supports cmd.exe, powershell, ttys, ssh sessions.
+
+If manual installation is required:
+
 Install from windows store from here:  https://aka.ms/terminal
 
 
-#### Git Bash:
+#### Git for windows:
+
+A msys based system which provides bash and basic unix tools as well as git.
+
+If manual installation is required:
 
 Install latest package from here: https://github.com/git-for-windows/git/releases/latest
 eg: https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/Git-2.36.0-64-bit.exe
@@ -69,7 +84,11 @@ eg: https://github.com/git-for-windows/git/releases/download/v2.36.0.windows.1/G
 
 #### VcXsrv:
 
+An X server for Windows
+
 https://sourceforge.net/projects/vcxsrv/
+
+If manual installation is required:
 
 Install from here https://sourceforge.net/projects/vcxsrv/files/latest/download
 
