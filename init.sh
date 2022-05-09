@@ -69,7 +69,8 @@ then
   brew install make gcc git
 
   # Code quality tools
-  brew install cppcheck clang-format gcovr
+  brew install cppcheck clang-format llvm gcovr
+     # llvm provides clang-tidy, however it is not in PATH, but installed to /usr/local/opt/llvm/bin
 
   # Install cmake and other tools
   brew install ccache cmake python
@@ -91,6 +92,9 @@ fi
 # Assuming running this in a git-bash shell on Windows 10, installs scoop as a package manager to get dependancies.
 if [ "$(expr substr $(uname) 1 15)" == "MINGW64_NT-10.0" ]
 then
+  # In case a user already has bash installed on windows (but not scoop) and runs init.sh
+  # we will install scoop again here. (and also git, in case something else provides bash)
+
   # Install required packages - get scoop package manager
   powershell -Command "Set-ExecutionPolicy RemoteSigned -scope CurrentUser ; iwr -useb get.scoop.sh | iex"
   if ! echo $PATH | grep -c scoop/shims &> /dev/null ; then
@@ -112,8 +116,8 @@ then
   scoop install make mingw git
 
   # Code quality tools
-  scoop install cppcheck
-     # clang-format clang-tidy gcovr   are missing from scoop
+  scoop install cppcheck llvm
+     # gcovr   are missing from scoop
 
   # Install cmake and other tools
   scoop install ccache cmake python
@@ -141,7 +145,7 @@ then
   #       many commands that makes available without installing specifically the other commands
 
   # Other possible packages
-  # scoop install llvm binutils cscope gcc gdb msys
+  # scoop install binutils cscope gcc gdb msys
 
 
   # Install other dev packages

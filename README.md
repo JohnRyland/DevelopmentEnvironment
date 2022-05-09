@@ -6,13 +6,19 @@ Set up for a development environment on different platforms
 
 There is an init.sh script here that can detect the platform and install the
 various packages. On Linux and macOS, the script can run natively. On Windows
-the script however requires a shell to be installed first. The recommended
-shell for this is git-bash.
+the script however requires a shell to be installed first.
 
-Once a shell/terminal program has been installed, then run this:
+If you have a shell already installed, then run this:
 
 ```
 ./init.sh
+```
+
+Otherwise on Windows run the init.bat script, it will install git-for-windows
+which includes bash and will then call the init.sh script.
+
+```
+init.bat
 ```
 
 On Windows, Linux and macOS this will install make, cmake, python, compilers, git, doxygen,
