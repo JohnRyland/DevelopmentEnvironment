@@ -76,7 +76,7 @@ then
   brew install ccache cmake python
 
   # Install documentation related tools
-  brew install doxygen graphviz plantuml ditaa pandoc basictex librsvg
+  brew install doxygen graphviz plantuml ditaa pandoc mactex librsvg
 
   # Install useful utilities
   brew install dos2unix sqlite db-browser-for-sqlite universal-ctags
