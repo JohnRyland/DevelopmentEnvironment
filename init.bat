@@ -6,5 +6,6 @@ cmd.exe /c scoop install git
 %USERPROFILE%\scoop\apps\git\current\bin\bash -c ./init.sh
 echo Done
 
+rem Show a shell when done
 %USERPROFILE%\scoop\apps\git\current\git-bash
 
