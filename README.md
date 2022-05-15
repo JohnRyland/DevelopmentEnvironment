@@ -4,6 +4,15 @@
 Set up for a development environment on different platforms
 
 
+# Getting started
+
+It is not assumed that you have git installed, however this is a git repository,
+so the suggested way to get started is to download these files as a zip from
+github, extract them and then run the init script.
+
+
+# Running the scripts
+
 There is an init.sh script here that can detect the platform and install the
 various packages. On Linux and macOS, the script can run natively. On Windows
 the script however requires a shell to be installed first.
