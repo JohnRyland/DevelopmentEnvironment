@@ -10,6 +10,9 @@ It is not assumed that you have git installed, however this is a git repository,
 so the suggested way to get started is to download these files as a zip from
 github, extract them and then run the init script.
 
+This repo as a zip:
+  https://github.com/JohnRyland/DevelopmentEnvironment/archive/refs/heads/main.zip
+
 
 # Running the scripts
 
