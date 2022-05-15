@@ -13,6 +13,9 @@ github, extract them and then run the init script.
 This repo as a zip:
   https://github.com/JohnRyland/DevelopmentEnvironment/archive/refs/heads/main.zip
 
+On windows, running this should bootstrap everything:
+  https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.bat
+
 
 # Running the scripts
 
