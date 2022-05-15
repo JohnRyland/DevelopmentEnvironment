@@ -117,7 +117,7 @@ then
 
   # Code quality tools
   scoop install cppcheck llvm
-     # gcovr   are missing from scoop
+     # gcovr   are missing from scoop - can install using pip
 
   # Install cmake and other tools
   scoop install ccache cmake python
@@ -147,6 +147,7 @@ then
   # Other possible packages
   # scoop install binutils cscope gcc gdb msys
 
+  pip install gcovr
 
   # Install other dev packages
   # scoop bucket add user https://github.com/excitoon/scoop-user.git
