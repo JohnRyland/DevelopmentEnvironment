@@ -16,6 +16,11 @@ This repo as a zip:
 On windows, running this should bootstrap everything:
   https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.bat
 
+To do that, right click on the init.bat link, and choose 'Save Target As'. When it
+finishes downloading, you can open it to run it. Windows might show a dialog that it
+is not safe to run, click on 'more info' and then click on 'run anyway'. Then the
+command prompt will display and start installing everything.
+
 
 # Running the scripts
 
