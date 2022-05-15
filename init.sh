@@ -28,6 +28,10 @@ then
   # Install cmake and other tools
   sudo apt install -y ccache cmake python-is-python3
 
+  # Install cross-platform toolchains for macOS and Windows
+      #  May need to use osxcross to create a macOS toolchain
+  sudo apt install -y gcc-mingw-w64-x86-64
+
   # Install documentation related tools
   sudo apt install -y doxygen graphviz plantuml ditaa pandoc mactex librsvg2-bin
 
@@ -40,7 +44,7 @@ then
   # Install other dev packages
   sudo apt install -y zlib1g-dev freeglut3-dev
 
-  # Update symlinks
+  # Update ccache symlinks
   sudo /usr/sbin/update-ccache-symlinks
    
   # Prepend ccache into the PATH
@@ -75,8 +79,17 @@ then
   # Install cmake and other tools
   brew install ccache cmake python
 
+  #   brew install distcc
+  # To restart distcc after an upgrade:
+  #   brew services restart distcc
+  # Or, if you don't want/need a background service you can just run:
+  #   /usr/local/opt/distcc/bin/distcc --allow=192.168.0.1/24
+
+  # Install cross-platform toolchains for Linux and Windows
+  brew install x86_64-elf-gcc mingw-w64
+
   # Install documentation related tools
-  brew install doxygen graphviz plantuml ditaa pandoc basictex librsvg
+  brew install doxygen graphviz plantuml ditaa pandoc mactex librsvg
 
   # Install useful utilities
   brew install dos2unix sqlite db-browser-for-sqlite universal-ctags
@@ -86,11 +99,27 @@ then
 
   # For doc generation
   pip install pandoc-latex-environment
+
+  # Update ccache symlinks
+  cd /usr/local/opt/ccache/libexec/
+  for CC in x86_64-apple-darwin20-c++-11 x86_64-apple-darwin20-g++-11 x86_64-apple-darwin20-gcc-11 \
+   x86_64-elf-c++ x86_64-elf-g++ x86_64-elf-gcc x86_64-elf-gcc-12.1.0 x86_64-w64-mingw32-c++ \
+   x86_64-w64-mingw32-g++ x86_64-w64-mingw32-gcc x86_64-w64-mingw32-gcc-12.1.0 gcc g++ cc c++ clang clang++
+  do
+    if [ ! -e ${CC} ]
+    then
+      ln -s ../bin/ccache ${CC}
+    fi
+  done
+  cd - > /dev/null
+
+  # Prepend ccache into the PATH
+  echo 'export PATH=/usr/local/opt/ccache/libexec/:$PATH' | tee -a ~/.bashrc
 fi
 
 
 # Assuming running this in a git-bash shell on Windows 10, installs scoop as a package manager to get dependancies.
-if [ "$(expr substr $(uname) 1 15)" == "MINGW64_NT-10.0" ]
+if [ "$(uname | cut -c 1-15)" == "MINGW64_NT-10.0" ]
 then
   # In case a user already has bash installed on windows (but not scoop) and runs init.sh
   # we will install scoop again here. (and also git, in case something else provides bash)
@@ -121,6 +150,9 @@ then
 
   # Install cmake and other tools
   scoop install ccache cmake python
+
+  # Install cross-platform toolchains for macOS and Windows
+     # probably can build using crosstool-ng, but probably no scoop pkg
 
   # Install documentation related tools
   scoop install doxygen graphviz plantuml pandoc miktex rsvg-convert
