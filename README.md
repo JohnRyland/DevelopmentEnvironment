@@ -24,7 +24,7 @@ command prompt will display and start installing everything.
 This requires that you have Windows 10, and it has been updated. A fresh install of
 Windows 10 version 1709 won't work until it has been updated. Keep checking and
 installing windows updates until the version is upgraded to something newer than 1709.
-
+Version 20H2 or better is 21H2.
 
 # Running the scripts
 
