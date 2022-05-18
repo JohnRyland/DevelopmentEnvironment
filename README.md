@@ -4,6 +4,30 @@
 Set up for a development environment on different platforms
 
 
+# Getting started
+
+It is not assumed that you have git installed, however this is a git repository,
+so the suggested way to get started is to download these files as a zip from
+github, extract them and then run the init script.
+
+This repo as a zip:
+  https://github.com/JohnRyland/DevelopmentEnvironment/archive/refs/heads/main.zip
+
+On windows, running this should bootstrap everything:
+  https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.bat
+
+To do that, right click on the init.bat link, and choose 'Save Target As'. When it
+finishes downloading, you can open it to run it. Windows might show a dialog that it
+is not safe to run, click on 'more info' and then click on 'run anyway'. Then the
+command prompt will display and start installing everything.
+
+This requires that you have Windows 10, and it has been updated. A fresh install of
+Windows 10 version 1709 won't work until it has been updated. Keep checking and
+installing windows updates until the version is upgraded to something newer than 1709.
+Version 20H2 or better is 21H2.
+
+# Running the scripts
+
 There is an init.sh script here that can detect the platform and install the
 various packages. On Linux and macOS, the script can run natively. On Windows
 the script however requires a shell to be installed first.
