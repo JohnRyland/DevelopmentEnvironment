@@ -12,7 +12,7 @@ so the suggested way to get started is to download and run the applicable init s
 On macOS and Linux, downloading and running this should bootstrap everything:
   https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.sh
 
-On windows, running this should bootstrap being able to then run init.sh which it will download:
+On windows, running this should bootstrap being able to then run init.sh which it downloads:
   https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.bat
 
 To download, right click on the link above, and choose 'Save Target As'. When it
