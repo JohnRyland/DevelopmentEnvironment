@@ -183,7 +183,8 @@ then
   # Other possible packages
   # scoop install binutils cscope gcc gdb msys
 
-  pip install gcovr
+  # pip is not in PATH until start a new terminal
+  ~/scoop/apps/python/current/Scripts/pip install gcovr
 
   # Install other dev packages
   # scoop bucket add user https://github.com/excitoon/scoop-user.git
@@ -195,7 +196,7 @@ fi
 
 
 # Update the git submodules
-print_banner "Updating submodules..."
-git submodule update --init --recursive
+#print_banner "Updating submodules..."
+#git submodule update --init --recursive
 
-
+print_banner "Done"
