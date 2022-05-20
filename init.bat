@@ -8,8 +8,15 @@ powershell -Command "Set-ExecutionPolicy RemoteSigned -scope CurrentUser ; iwr -
 set PATH=%USERPROFILE%\scoop\shims;%PATH%
 cmd.exe /c scoop install git wget
 if not exist "init.sh" wget https://raw.githubusercontent.com/JohnRyland/DevelopmentEnvironment/main/init.sh
-%USERPROFILE%\scoop\apps\git\current\bin\bash -c ./init.sh
-echo Done
+
+rem %USERPROFILE%\scoop\apps\git\current\bin\bash -c ./init.sh
+rem echo Done
+
+echo.
+echo *********************************************
+echo   Please now run ./init.sh in the terminal
+echo *********************************************
+echo.
 
 rem Show a shell when done
 %USERPROFILE%\scoop\apps\git\current\git-bash
