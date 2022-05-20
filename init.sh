@@ -130,10 +130,11 @@ then
     # Add scoop to path
     export PATH="~/scoop/shims/:$PATH"
     echo 'export PATH="~/scoop/shims/:$PATH"' | tee -a ~/.bash_profile
-  fi
 
-  # Add searching for main packages
-  scoop bucket add main
+    # Add searching for main packages, remove and re-add to avoid issues in bootstrapping this on fresh installs
+    scoop bucket rm main
+    scoop bucket add main
+  fi
 
   # Add searching for extra packages
   scoop bucket add extras
