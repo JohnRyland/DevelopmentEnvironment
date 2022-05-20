@@ -192,6 +192,16 @@ then
 
   # Configure dot
   dot -c
+
+  # This sudo command will be able to run commands elevated
+  scoop install sudo
+
+  # This will request the user to accept running the command elevated
+  sudo dism.exe //online //enable-feature //featurename:Microsoft-Windows-Subsystem-Linux //all //norestart
+  sudo dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart
+  
+  # When I tried this on a fresh install of windows - this command caused a reboot. Make this the last command
+  sudo wsl --install
 fi
 
 
