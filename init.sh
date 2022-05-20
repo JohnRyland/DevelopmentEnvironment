@@ -132,6 +132,9 @@ then
     echo 'export PATH="~/scoop/shims/:$PATH"' | tee -a ~/.bash_profile
   fi
 
+  # Add searching for main packages
+  scoop bucket add main
+
   # Add searching for extra packages
   scoop bucket add extras
 
