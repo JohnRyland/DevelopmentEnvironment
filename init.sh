@@ -199,8 +199,8 @@ then
   # This will request the user to accept running the command elevated
   sudo dism.exe //online //enable-feature //featurename:Microsoft-Windows-Subsystem-Linux //all //norestart
   sudo dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart
-  sudo start cmd "/C wsl --set-default-version 2"
-  sudo start cmd "/C wsl --install -d Ubuntu"
+  sudo start cmd "//C wsl --set-default-version 2"
+  sudo start cmd "//C wsl --install -d Ubuntu"
   print_banner "Please reboot for all changes to take effect"
 fi
 
