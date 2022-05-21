@@ -199,9 +199,9 @@ then
   # This will request the user to accept running the command elevated
   sudo dism.exe //online //enable-feature //featurename:Microsoft-Windows-Subsystem-Linux //all //norestart
   sudo dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart
-  
-  # When I tried this on a fresh install of windows - this command caused a reboot. Make this the last command
+  sudo wsl --set-default-version 2
   sudo wsl --install -d Ubuntu
+  print_banner "Please reboot for all changes to take effect"
 fi
 
 
