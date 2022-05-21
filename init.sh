@@ -201,7 +201,7 @@ then
   sudo dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart
   
   # When I tried this on a fresh install of windows - this command caused a reboot. Make this the last command
-  sudo wsl --install
+  sudo wsl --install -d Ubuntu
 fi
 
 
