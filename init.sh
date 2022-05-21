@@ -195,25 +195,26 @@ then
 
   # This sudo command will be able to run commands elevated
   scoop install sudo
-
-  # This will request the user to accept running the command elevated
-  sudo dism.exe //online //enable-feature //featurename:Microsoft-Windows-Subsystem-Linux //all //norestart
-  sudo dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart
-  sudo start cmd "//C wsl --set-default-version 2"
   
+  wget https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
+  echo '@echo off' > setup_wsl.bat
+  echo 'dism.exe //online //enable-feature //featurename:Microsoft-Windows-Subsystem-Linux //all //norestart' >> setup_wsl.bat
+  echo 'dism.exe //online //enable-feature //featurename:VirtualMachinePlatform //all //norestart' >> setup_wsl.bat
+  echo 'wsl --set-default-version 2"' >> setup_wsl.bat
+  echo 'wsl_update_x64.msi //passive' >> setup_wsl.bat
+  echo 'shutdown //r' >> setup_wsl.bat
   # sudo start cmd "//C wsl --install -d Ubuntu"
   echo '@echo off' > install_wsl.bat
-  echo 'wsl --set-default-version 2' >> install_wsl.bat
+  # echo 'wsl --set-default-version 2' >> install_wsl.bat
   echo 'wsl --install -d Ubuntu' >> install_wsl.bat
   echo 'del "%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup\install_wsl.bat"' >> install_wsl.bat
-  echo 'pause' >> install_wsl.bat
-
-  wget https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi
-  start wsl_update_x64.msi //passive
+  # echo 'pause' >> install_wsl.bat
   cp install_wsl.bat "$APPDATA/Microsoft/Windows/Start Menu/Programs/Startup/"
   
   print_banner "Please reboot for all changes to take effect"
-  shutdown //r
+
+  # This will request the user to accept running the command elevated
+  sudo start cmd "//C setup_wsl.bat"
 fi
 
 
