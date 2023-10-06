@@ -51,7 +51,11 @@ On Windows this will additionally install a number of desktop applications, incl
 Windows Terminal, Git Bash and VcXsrv. These are installed to %USERPROFILE%/scoop/apps and
 can be launched from the start menu.
 
-These manual installation instructions are now deprecated.
+----
+
+The manual installation instructions below are now deprecated as these are installed by the
+script. Additionally installing and using an X server on windows to run GUI Linux apps from
+WSL is no longer required, WSL now by default is able to run GUI apps directly.
 
 
 ## Windows 10
